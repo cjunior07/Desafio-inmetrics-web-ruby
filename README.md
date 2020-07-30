@@ -22,7 +22,7 @@ cd caminho\Desafio-inmetrics-web-ruby\logs
 allure serve allure-reports
 ```
 ### Pasta LOGS
-É gerado na pasta target:
+É gerado na pasta logs:
 1. Report do allure
 2. Screenshots
 
