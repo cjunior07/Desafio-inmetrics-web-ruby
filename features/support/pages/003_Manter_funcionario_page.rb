@@ -9,6 +9,12 @@ class ManterFuncionario < PageHelper
     element :inputSalario, "#dinheiro"
     element :radioCLT, "#clt"
     element :radioPJ, "#pj"
+    element :input_pesquisar, :xpath, "//input[@type='search']"
+
+    def pesquisar_funcionario(funcionario)
+        puts "Pesquisando funcionario"
+        input_pesquisar.set(funcionario)
+    end
 
     def acessar_novo_funcionario
         puts "Acessando novo funcionario"

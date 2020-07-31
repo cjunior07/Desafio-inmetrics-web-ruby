@@ -69,6 +69,10 @@ Dado("que acesso o sistema com o usuario {string} e senha {string}") do |usuario
   Entao("vejo a mensagem de sucesso e o funcionario listado") do
     @funcionario.validar_funcionario_cadastrado
   end
+
+  Quando("pesquiso pelo funcionario {string}") do |funcionario|
+    @funcionario.pesquisar_funcionario(funcionario)
+  end
   
   Quando("clico em editar no funcionario") do 
     @funcionario.clicar_editar_funcionario

@@ -105,7 +105,7 @@ Funcionalidade: Manter Funcionario
     Quando clico em enviar
     Entao vejo o alerta de CPF invalido
 
-  @CE009_MF_Cadastrar_Funcionario
+  @CE009_MF_Cadastrar_Funcionario @a
   Cenario: Cadastrar Novo Funcionario
     Quando clico em novo funcionario
     E preencho o NOME com "Claudio Junior"
@@ -116,11 +116,13 @@ Funcionalidade: Manter Funcionario
     E preencho o campo SALARIO com "1200000"
     E seleciono o TIPO DE CONTRATACAO com "CLT"
     Quando clico em enviar
+    E pesquiso pelo funcionario "Claudio Junior"
     Entao vejo a mensagem de sucesso e o funcionario listado
 
-  @CE010_MF_Editar_Funcionario_Cadastrado
+  @CE010_MF_Editar_Funcionario_Cadastrado @a
   Cenario: Editar Funcionario Cadastrado
-    Quando clico em editar no funcionario
+    Quando pesquiso pelo funcionario "Claudio Junior"
+    E clico em editar no funcionario
     E preencho o NOME com "Claudio da Luz Andrade Junior"
     E preencho o campo CPF com valor valido
     E seleciono o SEXO com "Masculino"
@@ -129,9 +131,11 @@ Funcionalidade: Manter Funcionario
     E preencho o campo SALARIO com "1200000"
     E seleciono o TIPO DE CONTRATACAO com "CLT"
     Quando clico em enviar
+    Quando pesquiso pelo funcionario "Claudio da Luz Andrade Junior"
     Entao vejo o funcionario editado listado
 
-  @CE011_MF_Remover_Funcionario_Editado
+  @CE011_MF_Remover_Funcionario_Editado @a
   Cenario: Remover funcionario editado
-    Quando clico em excluir no funcionario "Claudio da Luz Andrade Junior"
+    Quando pesquiso pelo funcionario "Claudio da Luz Andrade Junior"
+    E clico em excluir no funcionario "Claudio da Luz Andrade Junior"
     Entao vejo mensagem de sucesso e valido a exclusao do funcionario
